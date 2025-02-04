@@ -34,4 +34,16 @@ ENTRYPOINT fortune | cowsay | lolcat
 
 docker build -t ubuntu_with_fortune4 .
 docker run  ubuntu_with_fortune4 /bin/bash -c 'fortune | cowsay | lolcat'
+# OR SIMPLY
+
+docker run  ubuntu_with_fortune4
+
+#######################
+
+# LOGIN TO LEONARDO
+
+singularity pull docker://dcesini/hpqc_2025:ubuntu_with_fortune_5.0
+ls *.sif
+singularity run hpqc_2025_ubuntu_with_fortune_5.0.sif
+
 

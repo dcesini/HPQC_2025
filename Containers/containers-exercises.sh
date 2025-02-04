@@ -74,7 +74,7 @@ docker ps -a
 docker login
 docker images
 docker tag 5c2538cecdc2 dcesini/bdp1_2024:ubuntu_with_ping_1.0
-docker push dcesini/bdp1_2024:ubuntu_with_ping_1.0
+docker push dcesini/hpqc_2025:ubuntu_with_ping_1.0
 
 ############################################
 ### Bulding docker images using Dockerfiles

@@ -62,7 +62,7 @@ filebeat.config.modules:
 
 
 # ---------------------------- Elasticsearch Output ----------------------------
-#output.elasticsearch:
+#  output.elasticsearch:
   # Array of hosts to connect to.
   # hosts: ["localhost:9200"]
 

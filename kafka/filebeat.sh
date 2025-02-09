@@ -1,7 +1,27 @@
+################   DO THE FOLLOWING AS ROOT ###################
+###############################################################
+
+
 rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch
-  245  vim /etc/yum.repos.d/elastic.repo
-  246  yum install filebeat
-  247  systemctl enable filebeat
+vim /etc/yum.repos.d/elastic.repo
+
+################## This repo should look like the following ######
+[root@ip-172-31-90-58 ~]# cat /etc/yum.repos.d/elastic.repo
+
+[elastic-8.x]
+name=Elastic repository for 8.x packages
+baseurl=https://artifacts.elastic.co/packages/8.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
+autorefresh=1
+type=rpm-md
+##################################################
+
+yum install filebeat
+systemctl enable filebeat
 vim /etc/filebeat/filebeat.yml
 
 ######################################
@@ -25,7 +45,7 @@ filebeat.inputs:
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
-    - /home/cesini/LogSimulator/logsimulator.log
+    - /home/ec2-user/LogSimulator/logsimulator.log
     #- c:\programdata\elasticsearch\logs\*
 
 # ============================== Filebeat modules ==============================

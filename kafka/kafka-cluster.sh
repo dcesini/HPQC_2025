@@ -116,6 +116,10 @@ services:
 
 ############################################################################
 
-./docker-compose up --build --no-start
+docker-compose up --build --no-start
+docker-compose start
+docker ps
+docker-compose logs -f
+#### to stop: docker compose stop
 
 ################################################################################

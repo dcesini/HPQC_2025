@@ -110,3 +110,12 @@ services:
       - KAFKA_LISTENER_SECURITY_PROTOCOL_MAP=CONTROLLER:PLAINTEXT,BROKER:PLAINTEXT
       - KAFKA_CONTROLLER_QUORUM_VOTERS=1@localhost:29091,2@localhost:29092,3@localhost:29093
     network_mode: "host"
+
+
+
+
+############################################################################
+
+./docker-compose up --build --no-start
+
+################################################################################

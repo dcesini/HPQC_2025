@@ -2,7 +2,7 @@
 ## pull the official container image ####
 #########################################
 
-docker pull apache/kakfa:3.7.1
+docker pull apache/kafka:3.7.1
 
 ########################################################
 ### create the cluster 3 brokers and 3 controllers #####
